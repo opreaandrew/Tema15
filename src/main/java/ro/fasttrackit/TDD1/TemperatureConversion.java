@@ -1,4 +1,4 @@
-package ro.fasttrackit;
+package ro.fasttrackit.TDD1;
 
 public class TemperatureConversion {
 

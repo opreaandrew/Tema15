@@ -1,10 +1,10 @@
-package ro.fasttrackit;
+package ro.fasttrackit.TDD1;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static ro.fasttrackit.TemperatureConversion.*;
+import static ro.fasttrackit.TDD1.TemperatureConversion.*;
 
 class TemperatureConversionTest {
 
@@ -12,7 +12,7 @@ class TemperatureConversionTest {
     @DisplayName("WHEN converting Celsius to Fahrenheit, THEN the correct result is returned")
     void celsiusToFahrenheitTest() {
         //GIVEN
-//        TemperatureConversion temp = new TemperatureConversion();
+//        nimic
 
         //WHEN
         double fahrenheit = celsiusToFahrenheit(10.0);
@@ -26,7 +26,7 @@ class TemperatureConversionTest {
     @DisplayName("WHEN converting Fahrenheit to Celsius, THEN the correct result is returned")
     void fahrenheitToCelsiusTest() {
         //GIVEN
-//        TemperatureConversion temp = new TemperatureConversion();
+//        nimic
 
         //WHEN
         double fahrenheit = fahrenheitToCelsius(50.0);
