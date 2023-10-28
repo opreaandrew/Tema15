@@ -18,7 +18,7 @@ class PersonTest {
     }
 
     @Test
-    void invalidId() {
+    void validId() {
         // WHEN
         int id = testPerson.getId();
 
@@ -28,18 +28,7 @@ class PersonTest {
 
 //    @Test
 //    void emptyName() {
-//        //GIVEN
-//        Person testPerson2;
-//        Person testPerson3;
-//        //WHEN
-//        testPerson2 = new Person(null, 45);
-//        testPerson3 = new Person("", 45);
 //
-//        //THEN
-//        assertThat(testPerson2.getName()).isNotNull();
-//        assertThat(testPerson3.getName()).isNotBlank();
-
-
 //        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
 //            Person testPerson2 = new Person(null, 54);
 //        }, "IllegalArgumentException was expected");

@@ -16,13 +16,21 @@ public class Person {
     private static Integer idCounter = 1;
 
     public Person(String name, Integer age) {
-        this.id = idCounter++;
-//        if (name.isEmpty() || name.matches(".*(.)\\1{2,}.*")) {
-//            throw new IllegalArgumentException("Invalid name");
-//        } else {
+        if (name.isBlank() || name.matches(".*(.)\\1{2,}.*")) {
+            throw new IllegalArgumentException("Invalid name");
+        } else if (age < 0 || age > 130) {
+            throw new IllegalArgumentException("Invalid age");
+        } else {
+            this.id = idCounter++;
             this.name = name;
-//        }
+            this.age = age;
+        }
 
+    }
+
+    public Person(Integer id, String name, Integer age) {
+        this.id = id;
+        this.name = name;
         this.age = age;
     }
 }
