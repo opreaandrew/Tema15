@@ -21,7 +21,7 @@ public class PersonService {
     }
 
     public Person removePerson(int id) {
-        Person removed = new Person(null,null);
+        Person removed = new Person("placeholder",1);
         for (Person person : people) {
             if(person.getId() == id){
                 removed = person;

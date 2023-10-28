@@ -1,8 +1,10 @@
 package ro.fasttrackit.TDD2;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Field;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -17,6 +19,13 @@ class PersonServiceTest {
         serviceTest = new PersonService();
     }
 
+    @AfterEach
+    void resetIdCounter() throws NoSuchFieldException, IllegalAccessException {
+        Field idCounterField = Person.class.getDeclaredField("idCounter");
+        idCounterField.setAccessible(true);
+        idCounterField.set(null, 1);
+    }
+
     @Test
     void addPerson() {
         Person result = serviceTest.addPerson(new Person(null, "Andrei", 33));
@@ -25,7 +34,7 @@ class PersonServiceTest {
 
     @Test
     void removePerson() {
-        Person added = serviceTest.addPerson(new Person("Andrei", 33));
+        Person added = serviceTest.addPerson(new Person(null,"Andrei", 33));
         Person result = serviceTest.removePerson(1);
         assertThat(result.toString()).isEqualTo("Person(id=1, name=Andrei, age=33)");
     }

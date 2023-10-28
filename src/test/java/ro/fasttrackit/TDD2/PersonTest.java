@@ -1,12 +1,12 @@
 package ro.fasttrackit.TDD2;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
+
+import java.lang.reflect.Field;
+
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class PersonTest {
 
@@ -17,42 +17,48 @@ class PersonTest {
         testPerson = new Person("Gigel", 5);
     }
 
+    @AfterEach
+    void resetIdCounter() throws NoSuchFieldException, IllegalAccessException {
+        Field idCounterField = Person.class.getDeclaredField("idCounter");
+        idCounterField.setAccessible(true);
+        idCounterField.set(null, 1);
+    }
+
     @Test
     void validId() {
-        // WHEN
-        int id = testPerson.getId();
-
-        // THEN
         assertThat(testPerson.getId()).isPositive().isEqualTo(1);
     }
 
-//    @Test
-//    void emptyName() {
-//
-//        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
-//            Person testPerson2 = new Person(null, 54);
-//        }, "IllegalArgumentException was expected");
-//
-//        assertEquals("For input string: \"null\"", thrown.getMessage());
-//    }
+    @Test
+    void getName() {
+        assertThat(testPerson.getName()).isEqualTo("Gigel");
+    }
 
-//    @Test
-//    void threeOrMoreIdenticalCharsInName() {
-//    }
+    @Test
+    void emptyName() {
+        assertThatThrownBy(() -> new Person("   ", 25))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Invalid name");
+    }
+
+    @Test
+    void threeOrMoreIdenticalCharsInName() {
+        assertThatThrownBy(() -> new Person("rvvvrfgdswv", 25))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Invalid name");
+    }
 
     @Test
     void getAge() {
-        // WHEN
-        int id = testPerson.getAge();
-
-        // THEN
         assertThat(testPerson.getAge()).isPositive().isEqualTo(5);
     }
 
-//    @Test
-//    void invalidAge(){
-//    insert some exception handling here
-//    }
+    @Test
+    void invalidAge() {
+        assertThatThrownBy(() -> new Person("Gigelus", -1))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("Invalid age");
+    }
 
 
 }

@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4acfb124-bae1-4c04-9376-55f3e37ea3c1" name="Changes" comment="Friggin tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fasttrackit/TDD2/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fasttrackit/TDD2/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ro/fasttrackit/TDD2/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ro/fasttrackit/TDD2/PersonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ro/fasttrackit/TDD2/PersonServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ro/fasttrackit/TDD2/PersonServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ro/fasttrackit/TDD2/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ro/fasttrackit/TDD2/PersonTest.java" afterDir="false" />
     </list>
@@ -59,7 +59,22 @@
       <recent name="ro.fasttrackit" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PersonTest.emptyName">
+  <component name="RunManager" selected="JUnit.PersonTest">
+    <configuration name="PersonServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Homework15" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ro.fasttrackit.TDD2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ro.fasttrackit.TDD2" />
+      <option name="MAIN_CLASS_NAME" value="ro.fasttrackit.TDD2.PersonServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PersonServiceTest.addPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework15" />
       <extension name="coverage">
@@ -76,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonServiceTest.getPersonById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonServiceTest.removePerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework15" />
       <extension name="coverage">
         <pattern>
@@ -86,13 +101,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ro.fasttrackit.TDD2" />
       <option name="MAIN_CLASS_NAME" value="ro.fasttrackit.TDD2.PersonServiceTest" />
-      <option name="METHOD_NAME" value="getPersonById" />
+      <option name="METHOD_NAME" value="removePerson" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonTest.emptyName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Homework15" />
       <extension name="coverage">
         <pattern>
@@ -102,24 +117,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ro.fasttrackit.TDD2" />
       <option name="MAIN_CLASS_NAME" value="ro.fasttrackit.TDD2.PersonTest" />
-      <option name="METHOD_NAME" value="emptyName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersonTest.invalidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Homework15" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ro.fasttrackit.TDD2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ro.fasttrackit.TDD2" />
-      <option name="MAIN_CLASS_NAME" value="ro.fasttrackit.TDD2.PersonTest" />
-      <option name="METHOD_NAME" value="invalidId" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PersonTest.emptyName" />
-        <item itemvalue="JUnit.PersonServiceTest.getPersonById" />
+        <item itemvalue="JUnit.PersonTest" />
+        <item itemvalue="JUnit.PersonServiceTest" />
+        <item itemvalue="JUnit.PersonServiceTest.removePerson" />
         <item itemvalue="JUnit.PersonServiceTest.addPerson" />
         <item itemvalue="JUnit.PersonTest.validId" />
-        <item itemvalue="JUnit.PersonTest.invalidId" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698469374730</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Friggin tests">
+      <option name="closed" value="true" />
+      <created>1698496718154</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698496718154</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
